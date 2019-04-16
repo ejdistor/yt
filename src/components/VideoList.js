@@ -2,11 +2,9 @@ import React from 'react';
 import VideoItem from './VideoItem';
 
 const VideoList = ({ videos, onVideoSelect }) => {
-    let key = 0;
     const renderedList = videos.map((video) => {
-        key++;
         return (
-            <VideoItem key={key} video={video} onVideoSelect={onVideoSelect} />
+            <VideoItem key={video.id.videoId} video={video} onVideoSelect={onVideoSelect} />
         );
     });
 
